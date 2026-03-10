@@ -5,9 +5,6 @@
 ### Question 1 : 
 The probability is virtually zero. SHA-256 is designed to be collision-resistant; even with the massive computing power of the entire Bitcoin network, it would take roughly 18 billion years to have a 50% chance of finding a single collision
 
-### Question 2 :
-Because the algorithm is a linear combination, we can find collisions by offsetting characters. For instance, "c"** (char 99 and 96) and **"a a"** (char 97 and 97) both result in the same sum: * **"c": $(1 \times 99) + (2 \times 96) + 2 = 293$.
-* "aa" (with a space): If we adjust the values, any two strings where $\Delta\text{char}_1 = -2 \times \Delta\text{char}_2$ will collide. This demonstrates the lack of diffusion in the algorithm compared to SHA-256.
 
 ### Question 3 : 
 No, this is not recommended for strict reproducibility. TAR archives are not inherently reproducible because they record build-specific metadata such as timestamps, file ownership, and permissions, which vary across different systems and build environments. To make a tarball reproducible, one must explicitly normalize or strip this metadata using specific flags
